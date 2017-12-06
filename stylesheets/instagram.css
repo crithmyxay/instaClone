@@ -1,0 +1,232 @@
+html {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #fafafa;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    height: 20%;
+    background-color: #ffffff;
+    font-size: 24px;
+    text-align: left;
+    padding: 0 10px 20px 10px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgb(204, 200, 200);
+}
+
+.prof {
+    border-radius: 50%;
+}
+
+.profile {
+    height: 20%;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 3.5vw;
+    border-bottom: 1px solid rgb(204, 200, 200);
+}
+
+.profile-button {
+    width: 20vw;
+    height: 20vh;
+    padding: 10%;
+    max-width: 125px;
+}
+
+h3 {
+    margin: 0 0 10px 0;
+}
+
+#search {
+    text-align: center;
+}
+
+#button_list {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-div {
+    height: 80%;
+}
+
+.main-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Background of the Modal*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.849); 
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    position: relative;
+    width: 90%;
+    /* max-width: 1200px; */
+    padding: 0;
+
+}
+
+.mySlides {
+    display: none;
+    justify-content: center;
+    align-content: center;
+    /* max-width: 1200px; */
+    max-height: 100%;
+  }
+
+.mySlides img {
+    width: 75%;
+    min-height: 500px;
+    max-width: 1000px;
+    /* padding-bottom: 20%; */
+    object-fit: cover;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content, #caption { 
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    width: 90%;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 5;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (min-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+    h3 {
+        font-size: 34px;
+    }
+    .mySlides img {
+        width: 75%;
+        max-height: 500px;
+    }
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+  /* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.img-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5vh;
+    flex-wrap: wrap;
+}
+
+.img_thumb {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 5px;
+}
+
+.img_thumb:hover {
+    opacity: 0.7;
+}
+
+img {
+    width: 100%;
+}
+
+a img {
+    width: 50px;
+    height: 50px;
+}
+
+#desc {
+    display: none;
+}
